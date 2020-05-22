@@ -29,10 +29,6 @@ print("The result is {}".format(result))
 print("The result is {r:1.3f}".format(r=result))
 print("The result is {r:4.6f}".format(r=result))
 
-name="Jose"
-print(f'Hello his name is {name}')
-
-name = "Sam"
-age = 3
-print(f"{name} is {age}")
+name = "Jose"
+print ('f.Hello his name is {name}')
 
