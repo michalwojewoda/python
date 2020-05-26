@@ -1,3 +1,2 @@
-name = "Sam"
-age = 3
-print(f"{name} is {age}")
+with open("test.txt",mode="r") as test:
+    Contents = test.read()

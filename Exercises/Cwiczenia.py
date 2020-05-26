@@ -4,3 +4,4 @@ s = "Smakołyki"
 k = "Kurczaka"
 w = "biegac"
 print(f'Orzech bardzo lubi {s} {s} {s}')
+
