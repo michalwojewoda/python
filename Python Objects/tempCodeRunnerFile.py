@@ -1,11 +1,8 @@
-def pig_latin(word):
-    first_letter = word[0]
-
-    #check if vowel
-    if first_letter in "aeiou":
-        pig_word = word + "ay"
+def returners(a,b):
+    if a%2 == 0 and b%2 == 0:
+        result = min(a,b)
     else:
-        pig_word = word[1:] +first_letter + "ay"
-    return pig_word
+        result = max(a,b)
+    return(result)
 
-pig_latin("apple")
+print(returners(2,3))
