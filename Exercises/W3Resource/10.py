@@ -13,5 +13,4 @@ def fibonacci():
 		fib.append(fib[-1] + fib[-2])
 	print (len(fib))
 	return fib
-
 print (fibonacci())
