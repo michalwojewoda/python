@@ -1,4 +1,6 @@
 #starting with creation of a board 
+import random
+
 def display_board(board):
     print('\n'*100)
     print("    |     |   ")
@@ -51,3 +53,23 @@ def win_check(board, mark):
     (board[9] == board[6] == board[3] == mark) or # down
     (board[7] == board[5] == board[3] == mark) or #diagonal
     (board[9] == board[5] == board[1] == mark) #Diagonal
+
+# Random module - to randomly choose player that goes first
+
+import random
+
+def choose_first():
+
+    flip = random.randint(0,1)
+    if flip == 0:
+        return "Player 1"
+    else:
+        return "Player 2"
+
+# booleaon that indicate free space on the board
+
+def space_check(board, position):
+
+    return board[position] == " "
+
+#check if the board is fulli
