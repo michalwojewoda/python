@@ -5,15 +5,16 @@ import random
 def display_board(board):
     print('\n'*100)
     print("    |     |   ")
-    print(" "+board[1]+"  |  "+board[2]+"  |  "+board[3])
+    print(" "+board[7]+"  |  "+board[8]+"  |  "+board[9])
     print("----|-----|----")
-    print(" "+board[1]+"  |  "+board[2]+"  |  "+board[3])
+    print(" "+board[4]+"  |  "+board[5]+"  |  "+board[6])
     print("----|-----|----")
     print(" "+board[1]+"  |  "+board[2]+"  |  "+board[3])
     print("    |     |   ")
 
 board = ["#","0","0","0","0","0","0","0","0","0"]
-
+print(display_board(board))
+print(display_board(board))
 
 #assign players
 
@@ -40,7 +41,7 @@ def place_marker(board, marker,position):
 
     board[position] = marker 
 
-# write a function tat takes in a board and mark x o and then checks to see if that mark has won
+# write a function that takes in a board and mark x o and then checks to see if that mark has won
 
 def win_check(board, mark):
 
