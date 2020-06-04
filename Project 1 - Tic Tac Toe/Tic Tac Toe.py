@@ -13,8 +13,7 @@ def display_board(board):
     print("    |     |   ")
 
 board = ["#","0","0","0","0","0","0","0","0","0"]
-print(display_board(board))
-print(display_board(board))
+
 
 #assign players
 
@@ -54,7 +53,7 @@ def win_check(board, mark):
     (board[8] == board[5] == board[2] == mark) or # down
     (board[9] == board[6] == board[3] == mark) or # down
     (board[7] == board[5] == board[3] == mark) or #diagonal
-    (board[9] == board[5] == board[1] == mark) #Diagonal
+    (board[9] == board[5] == board[1] == mark)) #Diagonal
 
 # Random module - to randomly choose player that goes first
 
@@ -76,7 +75,7 @@ def space_check(board, position):
 
 def full_board_check(board):
     for i in range(1,10):
-        if space_check(board.i):
+        if space_check(board,i):
             return False
     return True # that says boar is full
 
@@ -84,8 +83,8 @@ def full_board_check(board):
 
 def playerchoice(board):
     position = 0
-    while position not in [1,2,3,4,5,6,7,8,9,] or full_board_check(board,position):
-        position = int(input('choose a position (1-9 '))
+    while position not in [1,2,3,4,5,6,7,8,9] or not space_check(board, position):
+        position = int(input('choose a position (1-9) '))
     return position
 
 #ask player if he want to play again
@@ -108,9 +107,9 @@ while True:
     player1_marker,player2_marker = player_input()
 
     turn = choose_first()
-    print(turn+' will go first'):
+    print(turn +' will go first')
 
-    play_game = input("Ready to play? y or n")
+    play_game = input("Ready to play? y or n: ")
 
     if play_game == 'y':
         game_on = True
@@ -133,7 +132,7 @@ while True:
             #check if they won
             if win_check(the_board,player1_marker):
                 display_board(the_board)
-                print('player 1 has won!')
+                print('Player 1 has won!')
                 game_on = False
             # or check if there is a tie
             else:
