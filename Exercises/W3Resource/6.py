@@ -4,3 +4,4 @@ list = values.split(",")
 tuple = tuple(list)
 print("This is the list: ", list)
 print("This is the tuple: ", tuple)
+#finished
